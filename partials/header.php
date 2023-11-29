@@ -15,4 +15,13 @@ include __DIR__ . "/../Model/db.php"
 <body>
     <header class="container">
         <h1>Hotels</h1>
+
+        <form action="index.php" method="GET">
+            <select class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="available"> 
+                <option value="all">Tutti</option>
+                <option value="0">Non Disponibile</option>
+                <option value="1">Disponibile</option>
+            </select>
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
     </header>
