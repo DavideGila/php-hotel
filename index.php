@@ -1,5 +1,11 @@
 <?php
 include __DIR__ . "/partials/header.php";
+
+if (isset($_GET["available"])) {
+    $available = $_GET["available"];
+
+    $hotels = array_filter($hotels, fn($el) => $available === 'all' || $el['parking'] == $available);
+}
 ?>
 
 <main class="container">
