@@ -4,7 +4,12 @@ include __DIR__ . "/partials/header.php";
 if (isset($_GET["available"])) {
     $available = $_GET["available"];
 
-    $hotels = array_filter($hotels, fn($el) => $available === 'all' || $el['parking'] == $available);
+    $hotels = array_filter($hotels, fn($park) => $available === 'all' || $park['parking'] == $available);
+};
+
+if (isset($_GET["vote"])) {
+    $vote = $_GET["vote"];
+    $hotels = array_filter($hotels, fn($el) => $vote === 'all'|| $el['vote'] == $vote);
 }
 ?>
 
