@@ -22,6 +22,14 @@ include __DIR__ . "/../Model/db.php"
                 <option value="0">Non Disponibile</option>
                 <option value="1">Disponibile</option>
             </select>
+            <select class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="vote">
+                <option value="all">Tutti</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </header>
